@@ -20,6 +20,8 @@ public class EmployeeModel {
     private String department;
     private LocalDateTime registeredData;
     private LocalDateTime updatedDate;
+    private String emailId;
+    private String password;
 
     public EmployeeModel(EmployeeDto employeeDto){
         this.firstName = employeeDto.getFirstName();
@@ -27,8 +29,9 @@ public class EmployeeModel {
         this.companyName = employeeDto.getCompanyName();
         this.salary = employeeDto.getSalary();
         this.department = employeeDto.getDepartment();
+        this.emailId = employeeDto.getEmailId();
+        this.password = employeeDto.getPassword();
     }
-
     public EmployeeModel() {
 
     }
