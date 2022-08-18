@@ -8,6 +8,7 @@ import lombok.Data;
 public class Response {
     private String message;
     private long errorCode;
+    private Object token;
 
     public Response() {
 
