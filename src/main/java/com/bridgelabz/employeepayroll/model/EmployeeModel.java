@@ -1,6 +1,5 @@
 package com.bridgelabz.employeepayroll.model;
 
-import com.bridgelabz.employeepayroll.dto.DepartmentDto;
 import com.bridgelabz.employeepayroll.dto.EmployeeDto;
 import lombok.Data;
 
@@ -18,20 +17,16 @@ public class EmployeeModel {
     private String lastName;
     private String companyName;
     private long salary;
-    @OneToOne
-    private EmployeeDepartment employeeDepartment;
+    private String department;
     private LocalDateTime registeredData;
     private LocalDateTime updatedDate;
-    private String emailId;
-    private String password;
 
     public EmployeeModel(EmployeeDto employeeDto){
         this.firstName = employeeDto.getFirstName();
         this.lastName = employeeDto.getLastName();
         this.companyName = employeeDto.getCompanyName();
         this.salary = employeeDto.getSalary();
-        this.emailId = employeeDto.getEmailId();
-        this.password = employeeDto.getPassword();
+        this.department = employeeDto.getDepartment();
     }
 
     public EmployeeModel() {
